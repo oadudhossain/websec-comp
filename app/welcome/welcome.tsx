@@ -225,12 +225,12 @@ export function Welcome() {
             {/* Left Content */}
             <div>
               <div className="flex-1">
-                <p className="text-sm font-medium">Security-on-Demand</p>
+                <p className="text-sm font-semibold">Security-on-Demand</p>
                 <p className="mt-1 text-[#7b828b] text-2xl leading-snug">
                   For partners who don’t want a subscription but do <br /> want
                   security services{" "}
                   <span className="font-medium text text-[#111827]">
-                    at a discounted hourly rate
+                    at a discounted hourly rate.
                   </span>
                   .
                 </p>
