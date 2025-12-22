@@ -237,9 +237,9 @@ export function Welcome() {
               </div>
             </div>
             {/* BG IMAGE  */}
-            <div>
+            <div className="relative content-center">
               <div
-                className="w-40 h-20  rounded-2xl bg-no-repeat bg-right bg-contain"
+                className="w-96 h-32 absolute -top-16 -left-44 rounded-2xl bg-no-repeat bg-right bg-contain"
                 style={{
                   backgroundImage:
                     "url('https://i.ibb.co/20KfrzHH/Clip-path-group.png')",
@@ -262,7 +262,7 @@ export function Welcome() {
                   <div className="flex items-center gap-3">
                     <button
                       type="button"
-                      className="px-4 py-2 rounded-lg bg-[#8C61F533] text-[#280072] text-sm font-medium"
+                      className="px-4 py-2 rounded-lg bg-[#8C61F533] text-[#280072] text-sm font-semibold"
                     >
                       Get Started
                     </button>
