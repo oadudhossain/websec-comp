@@ -221,45 +221,60 @@ export function Welcome() {
         </div>
         {/* footer  */}
         <section className="w-full max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-gradient-to-r from-[#F5F3FF] to-white border border-[#E5E7EB]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-white border-2 border-[#F3F4F6]">
             {/* Left Content */}
-            <div className="flex-1">
-              <p className="text-sm font-medium text-[#6D28D9]">
-                Security-on-Demand
-              </p>
-              <p className="mt-1 text-[#4B5563] text-base leading-snug">
-                For partners who don’t want a subscription but do want security
-                services at a{" "}
-                <span className="font-medium text-[#111827]">
-                  discounted hourly rate
-                </span>
-                .
-              </p>
+            <div>
+              <div className="flex-1">
+                <p className="text-sm font-medium">Security-on-Demand</p>
+                <p className="mt-1 text-[#7b828b] text-2xl leading-snug">
+                  For partners who don’t want a subscription but do <br /> want
+                  security services{" "}
+                  <span className="font-medium text text-[#111827]">
+                    at a discounted hourly rate
+                  </span>
+                  .
+                </p>
+              </div>
             </div>
-
+            {/* BG IMAGE  */}
+            <div>
+              <div
+                className="w-40 h-20  rounded-2xl bg-no-repeat bg-right bg-contain"
+                style={{
+                  backgroundImage:
+                    "url('https://i.ibb.co/20KfrzHH/Clip-path-group.png')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "right center",
+                }}
+              />
+            </div>
             {/* Right Content */}
-            <div className="flex items-center gap-6">
-              <div className="text-right">
+            <div className="grid">
+              <div className="">
                 <span className="text-[#6B7280] text-sm">€</span>
-                <span className="text-2xl font-semibold text-[#111827]">
+                <span className="text-2xl font-semi]bold text-[#111827]">
                   100
                 </span>
+                <span className="text-[#6B7280]">/per month</span>
               </div>
+              <div>
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-3">
+                    <button
+                      type="button"
+                      className="px-4 py-2 rounded-lg bg-[#8C61F533] text-[#280072] text-sm font-medium"
+                    >
+                      Get Started
+                    </button>
 
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  className="px-4 py-2 rounded-lg bg-[#7C3AED] text-white text-sm font-medium"
-                >
-                  Get Started
-                </button>
-
-                <button
-                  type="button"
-                  className="px-4 py-2 rounded-lg border border-[#E5E7EB] text-[#111827] text-sm font-medium bg-white"
-                >
-                  Learn More
-                </button>
+                    <button
+                      type="button"
+                      className="px-4 py-2 rounded-lg border border-[#280072] text-[#280072] text-sm font-medium bg-white"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
