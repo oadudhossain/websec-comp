@@ -280,6 +280,95 @@ export function Welcome() {
           </div>
         </section>
       </div>
+      {/* BILLING ---------------------- */}
+      <section className="w-full max-w-6xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-[#131927] border-2 border-[#F3F4F6]">
+          {/* Left Content */}
+          <div>
+            <div className="flex-1">
+              <p className="text-sm text-white font-semibold">
+                Red Team as a Service
+              </p>
+              <small className="mt-1 text-[#7b828b]  leading-snug">
+                This your current workspace plan. You can manage your
+                subscription, top-up limit, and other features. .
+              </small>
+              <p className="py-3 text-gray-300 text-sm font-semibold">
+                365 days remaining
+              </p>
+              <div className="py-2">
+                <button
+                  type="button"
+                  className="px-3 py-1 rounded-lg border border-[#FF94A6] text-[#FF94A6] text-sm font-medium "
+                >
+                  Cancel Subscription
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* BG IMAGE  */}
+          <div className="relative content-center">
+            <div
+              className="min-w-3xl h-40 absolute -top-20 -right-66 bg-no-repeat bg-right"
+              style={{
+                backgroundImage:
+                  "url('https://i.ibb.co.com/21MfhsF2/Vector.png')",
+                backgroundSize: "contain",
+                backgroundPosition: "right center",
+              }}
+            />
+          </div>
+          {/* Right Content */}
+          <div className="grid">
+            {/* <div className="relative content-center">
+              <div
+                className="min-w-3xl h-40 absolute -top-20 -right-2/6 bg-no-repeat bg-right"
+                style={{
+                  backgroundImage:
+                    "url('https://i.ibb.co.com/B53mVMnX/Vector-1.png')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "right center",
+                }}
+              />
+            </div> */}
+
+            <div className="flex items-center justify-between rounded-2xl bg-[#222A3C] px-6 py-5 text-white shadow-lg">
+              {/* Left content */}
+              <div>
+                <div>
+                  <p className="text-sm text-[#9EA2AE]">Outstanding Balance</p>
+
+                  <p className="mt-1 text-lg font-medium">
+                    12 hours <span className="text-[#9EA2AE]">/ 100$</span>
+                  </p>
+                </div>
+                {/* right  */}
+                <button
+                  type="button"
+                  className="mt-4 px-4 py-1.5 rounded-lg border border-[#9EA2AE] text-sm text-[#F3F4F6] hover:bg-[#374151] transition"
+                >
+                  Edit Hours
+                </button>
+              </div>
+
+              {/* -------   */}
+              <div className="flex flex-col justify-between rounded-xl bg-[#F5F3FF] px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
+                <div>
+                  <img
+                    className="w-12"
+                    src="https://i.ibb.co.com/tNWHc41/images-1.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <span className="text-sm pl-2 font-semibold tracking-wide">
+                  **1213
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
