@@ -1,9 +1,22 @@
 import { Button } from "~/components/ui/button";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-import { CircleX, Locate, ShieldAlert } from "lucide-react";
+import { CircleX, Locate, Plus, ShieldAlert } from "lucide-react";
+import React, { useState } from "react";
+type PaymentMethod = "visa" | "mastercard" | "paypal";
 
 export function Welcome() {
+  const [selected, setSelected] = useState<PaymentMethod>("visa");
+
+  const Radio = ({ active }: { active: boolean }) => (
+    <span
+      className={`w-5 h-5 rounded-full flex items-center justify-center border transition ${
+        active ? "bg-[#6D28D9] border-[#6D28D9]" : "border-[#D1D5DB]"
+      }`}
+    >
+      {active && <span className="w-2.5 h-2.5 bg-white rounded-full" />}
+    </span>
+  );
   return (
     <section className="w-full max-w-7xl mx-auto px-4">
       <div className="flex flex-wrap justify-center items-stretch gap-6">
@@ -352,7 +365,7 @@ export function Welcome() {
               </div>
 
               {/* -------   */}
-              <div className="flex flex-col justify-between rounded-xl bg-[#F5F3FF] -mt-7 px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
+              <div className="flex flex-col justify-between rounded-xl bg-[#F5F3FF] -mt-9 px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
                 <div>
                   <img
                     className="w-12"
@@ -367,6 +380,155 @@ export function Welcome() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* Paymant details ----------- */}
+      <section className="bg-white rounded-2xl p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left info */}
+          <div className="space-y-1">
+            <h2 className="text-lg font-semibold text-[#111827]">
+              Payment details
+            </h2>
+            <p className="text-sm text-[#6B7280]">
+              Select default payment method.
+            </p>
+          </div>
+
+          {/* Right cards */}
+          <div className="lg:col-span-2 space-y-3">
+            {/* VISA */}
+            <div
+              role="radio"
+              aria-checked={selected === "visa"}
+              onClick={() => setSelected("visa")}
+              className={`flex items-start justify-between p-4 rounded-xl border cursor-pointer transition ${
+                selected === "visa"
+                  ? "bg-[#F5F3FF] border-[#EDE9FE]"
+                  : "bg-white border-[#E5E7EB]"
+              }`}
+            >
+              <div className="flex gap-4">
+                <div className="w-10 h-6 flex items-center justify-center rounded bg-white text-xs font-semibold shrink-0">
+                  VISA
+                </div>
+
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-[#111827]">
+                    Visa ending in 1213
+                  </p>
+                  <p className="text-xs text-[#6B7280]">Expiry 08/2026</p>
+
+                  <div className="flex gap-4 pt-1 text-xs">
+                    <button className="text-[#6D28D9] font-medium">
+                      Set as default
+                    </button>
+                    <button className="text-[#6B7280]">Edit</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-1">
+                <Radio active={selected === "visa"} />
+              </div>
+            </div>
+
+            {/* MASTERCARD */}
+            <div
+              role="radio"
+              aria-checked={selected === "mastercard"}
+              onClick={() => setSelected("mastercard")}
+              className={`flex items-start justify-between p-4 rounded-xl border cursor-pointer transition ${
+                selected === "mastercard"
+                  ? "bg-[#F5F3FF] border-[#EDE9FE]"
+                  : "bg-white border-[#E5E7EB]"
+              }`}
+            >
+              <div className="flex gap-4">
+                <div className="w-10 h-6 flex items-center justify-center rounded bg-white text-xs font-semibold shrink-0">
+                  MC
+                </div>
+
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-[#111827]">
+                    Master Card ending in 1213
+                  </p>
+                  <p className="text-xs text-[#6B7280]">Expiry 08/2026</p>
+
+                  <div className="flex gap-4 pt-1 text-xs">
+                    <button className="text-[#6D28D9] font-medium">
+                      Set as default
+                    </button>
+                    <button className="text-[#6B7280]">Edit</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-1">
+                <Radio active={selected === "mastercard"} />
+              </div>
+            </div>
+
+            {/* PAYPAL */}
+            <div
+              role="radio"
+              aria-checked={selected === "paypal"}
+              onClick={() => setSelected("paypal")}
+              className={`flex items-start justify-between p-4 rounded-xl border cursor-pointer transition ${
+                selected === "paypal"
+                  ? "bg-[#F5F3FF] border-[#EDE9FE]"
+                  : "bg-white border-[#E5E7EB]"
+              }`}
+            >
+              <div className="flex gap-4">
+                <div className="w-10 h-6 flex items-center justify-center rounded bg-white text-xs font-semibold shrink-0">
+                  PayPal
+                </div>
+
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-[#111827]">
+                    PayPal ending in 1213
+                  </p>
+                  <p className="text-xs text-[#6B7280]">Jhon Doe</p>
+                  <p className="text-xs text-[#6B7280]">contact@websec.nl</p>
+
+                  <div className="flex gap-4 pt-1 text-xs">
+                    <button className="text-[#6D28D9] font-medium">
+                      Set as default
+                    </button>
+                    <button className="text-[#6B7280]">Edit</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-1">
+                <Radio active={selected === "paypal"} />
+              </div>
+            </div>
+            <button
+              type="button"
+              className="flex px-6 py-3 rounded-lg bg-[#131927] text-white font-medium"
+            >
+              <Plus color="#cbbdbd" className="mr-2" />
+              Add new payment method
+            </button>
+          </div>
+        </div>
+
+        {/* Footer actions */}
+        <div className="flex justify-end gap-3 mt-8 pt-6">
+          <button
+            type="button"
+            className="px-6 py-2 w-40 h-12 rounded-lg border border-[#131927] text-sm font-medium"
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            className="px-6 py-2 w-40 h-12 rounded-lg bg-[#131927] text-white text-sm font-medium"
+          >
+            Save
+          </button>
         </div>
       </section>
     </section>
