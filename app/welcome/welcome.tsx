@@ -332,7 +332,7 @@ export function Welcome() {
               />
             </div> */}
 
-            <div className="flex items-center justify-between rounded-2xl bg-[#222A3C] px-6 py-5 text-white shadow-lg">
+            <div className="flex items-center justify-between rounded-2xl bg-[#222A3C] px-6 gap-10 py-5 text-white shadow-lg">
               {/* Left content */}
               <div>
                 <div>
@@ -352,7 +352,7 @@ export function Welcome() {
               </div>
 
               {/* -------   */}
-              <div className="flex flex-col justify-between rounded-xl bg-[#F5F3FF] px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
+              <div className="flex flex-col justify-between rounded-xl bg-[#F5F3FF] -mt-7 px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
                 <div>
                   <img
                     className="w-12"
