@@ -365,10 +365,10 @@ export function Welcome() {
               </div>
 
               {/* -------   */}
-              <div className="flex flex-col justify-between rounded-xl bg-[#F5F3FF] -mt-9 px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
+              <div className="flex flex-col gap-y-1 justify-between rounded-xl bg-[#F5F3FF] -mt-9 px-2 py-3 text-[#111827] min-w-[110px] h-[64px]">
                 <div>
                   <img
-                    className="w-12"
+                    className="w-12 rounded-sm "
                     src="https://i.ibb.co.com/tNWHc41/images-1.jpg"
                     alt=""
                   />
@@ -383,7 +383,7 @@ export function Welcome() {
         </div>
       </section>
       {/* Paymant details ----------- */}
-      <section className="bg-white rounded-2xl p-6">
+      <section className="p-6 w-full max-w-6xl mx-auto mt-5 bg-white border-2 border-[#F3F4F6] rounded-2xl shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left info */}
           <div className="space-y-1">
@@ -409,8 +409,12 @@ export function Welcome() {
               }`}
             >
               <div className="flex gap-4">
-                <div className="w-10 h-6 flex items-center justify-center rounded bg-white text-xs font-semibold shrink-0">
-                  VISA
+                <div>
+                  <img
+                    className="w-12 rounded-sm"
+                    src="https://i.ibb.co.com/tNWHc41/images-1.jpg"
+                    alt=""
+                  />
                 </div>
 
                 <div className="space-y-1">
@@ -445,8 +449,12 @@ export function Welcome() {
               }`}
             >
               <div className="flex gap-4">
-                <div className="w-10 h-6 flex items-center justify-center rounded bg-white text-xs font-semibold shrink-0">
-                  MC
+                <div>
+                  <img
+                    className="w-11 rounded-sm "
+                    src="https://i.ibb.co.com/5Wv8hZ5C/Mastercard-logo.webp"
+                    alt=""
+                  />
                 </div>
 
                 <div className="space-y-1">
@@ -480,12 +488,16 @@ export function Welcome() {
                   : "bg-white border-[#E5E7EB]"
               }`}
             >
-              <div className="flex gap-4">
-                <div className="w-10 h-6 flex items-center justify-center rounded bg-white text-xs font-semibold shrink-0">
-                  PayPal
+              <div className="flex ">
+                <div>
+                  <img
+                    className="w-5 rounded-sm ml-3"
+                    src="https://i.ibb.co.com/ksK21fSD/Vector-2.png"
+                    alt=""
+                  />
                 </div>
 
-                <div className="space-y-1">
+                <div className="space-y-1 ml-7">
                   <p className="text-sm font-medium text-[#111827]">
                     PayPal ending in 1213
                   </p>
@@ -507,7 +519,7 @@ export function Welcome() {
             </div>
             <button
               type="button"
-              className="flex px-6 py-3 rounded-lg bg-[#131927] text-white font-medium"
+              className="flex px-6 py-3 mt-5 rounded-lg bg-[#131927] text-white font-medium"
             >
               <Plus color="#cbbdbd" className="mr-2" />
               Add new payment method
