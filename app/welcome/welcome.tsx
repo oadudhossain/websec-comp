@@ -1,7 +1,7 @@
 import { Button } from "~/components/ui/button";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-import { CircleX, Locate, Plus, ShieldAlert } from "lucide-react";
+import { CircleCheck, CircleX, Locate, Plus, ShieldAlert } from "lucide-react";
 import React, { useState } from "react";
 type PaymentMethod = "visa" | "mastercard" | "paypal";
 
@@ -540,6 +540,106 @@ export function Welcome() {
             className="px-6 py-2 w-40 h-12 rounded-lg bg-[#131927] text-white text-sm font-medium"
           >
             Save
+          </button>
+        </div>
+      </section>
+      {/* NEW TARIF PLAN -------- */}
+      <section className="mt-5 w-137.5 h-123 rounded-2xl bg-white p-6 shadow-lg">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-[#111827]">
+            New tarif Plan
+          </h2>
+        </div>
+        {/* Subtitle ---------------- */}
+        <div className="rounded-2xl mb-4 bg-[#F8F8FC] p-6 shadow-sm">
+          <div className="flex justify-between ">
+            <p className="text-xs font-semibold text-[#111827] mb-1">
+              Red Team as a Service + Additional Hours
+            </p>
+            <span className="px-3 py-1 rounded-full bg-[#543A93] text-white text-xs font-medium">
+              inv-10124
+            </span>
+          </div>
+
+          <p className="text-sm text-[#6B7280] my-3">
+            This invoice is for services provided under the{" "}
+            <span className="font-medium text-[#101828]">
+              Red Team as a Service
+            </span>{" "}
+            tariff plan.
+          </p>
+
+          {/* Details */}
+          <div className="space-y-2 text-sm mb-6">
+            <div className="flex items-center gap-2 text-[#374151]">
+              <span className="flex items-center justify-center text-[#312256] text-xs">
+                <CircleCheck size={18} strokeWidth={2.5} />
+              </span>
+              <span>
+                Hours Estimated: <strong className="text-base">12 hours</strong>
+              </span>
+            </div>
+            <div className="flex items-center gap-2 text-[#374151]">
+              <span className="flex items-center justify-center text-[#312256] text-xs">
+                <CircleCheck size={18} strokeWidth={2.5} />{" "}
+              </span>
+              <span>
+                Hours Spent: <strong className="text-base">18 hours</strong>
+              </span>
+            </div>
+            <div className="flex items-center gap-2 text-[#374151]">
+              <span className="flex items-center justify-center text-[#312256] text-xs">
+                <CircleCheck size={18} strokeWidth={2.5} />
+              </span>
+              <span>
+                Additional Hours: <strong className="text-base">6 hours</strong>
+              </span>
+            </div>
+            <div className="flex items-center gap-2 text-[#374151]">
+              <span className="flex items-center justify-center text-[#312256] text-xs">
+                <CircleCheck size={18} strokeWidth={2.5} />{" "}
+              </span>
+              <span>
+                Hours Staked: <strong className="text-base">18 hours</strong>
+              </span>
+            </div>
+          </div>
+
+          {/* Amount */}
+          <div className="border-t border-[#E5E7EB] pt-4 mb-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-base font-semibold text-[#111827]">
+                  Amount:
+                </p>
+                <p className="text-xs text-[#6B7280]">Monthly billing</p>
+              </div>
+
+              <div>
+                <p className="text-3xl font-medium text-[#111827]">
+                  {" "}
+                  <span className="text-base text-[#6D717F]">€</span> 1500.00
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="flex gap-3">
+          <button
+            type="button"
+            className="flex-1 px-4 py-2 rounded-lg border border-[#D1D5DB] text-sm font-medium"
+          >
+            Download the bill
+          </button>
+
+          <button
+            type="button"
+            className="flex-1 px-4 py-2 rounded-lg bg-[#111827] text-white text-sm font-medium"
+          >
+            Send to Email
           </button>
         </div>
       </section>
