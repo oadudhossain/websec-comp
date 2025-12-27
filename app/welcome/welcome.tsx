@@ -1,7 +1,15 @@
 import { Button } from "~/components/ui/button";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-import { CircleCheck, CircleX, Locate, Plus, ShieldAlert } from "lucide-react";
+import {
+  CircleCheck,
+  CircleX,
+  Download,
+  Locate,
+  MailPlus,
+  Plus,
+  ShieldAlert,
+} from "lucide-react";
 import React, { useState } from "react";
 type PaymentMethod = "visa" | "mastercard" | "paypal";
 
@@ -607,7 +615,7 @@ export function Welcome() {
           </div>
 
           {/* Amount */}
-          <div className="border-t border-[#E5E7EB] pt-4 mb-6">
+          <div className="border-t border-[#E5E7EB] pt-4">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-base font-semibold text-[#111827]">
@@ -630,16 +638,47 @@ export function Welcome() {
         <div className="flex gap-3">
           <button
             type="button"
-            className="flex-1 px-4 py-2 rounded-lg border border-[#D1D5DB] text-sm font-medium"
+            className="flex px-11.5 gap-2 py-2 rounded-lg border border-[#000000] text-base font-semibold"
           >
+            <Download className="" />
             Download the bill
           </button>
 
           <button
             type="button"
-            className="flex-1 px-4 py-2 rounded-lg bg-[#111827] text-white text-sm font-medium"
+            className="flex px-11.5 gap-2 py-2 rounded-lg bg-[#131927] text-white text-base font-semibold"
           >
-            Send to Email
+            <MailPlus color="#ffffff" /> Send to Email
+          </button>
+        </div>
+      </section>
+      {/* Bill has been sent CARD------------- */}
+      <section className="my-10">
+        <div className="w-112.5 h-70  bg-white rounded-2xl p-6 shadow-xl text-center">
+          {/* Icon */}
+          <div className="flex justify-center mb-4">
+            <MailPlus color="#c24242" strokeWidth={2} />
+          </div>
+
+          {/* Title */}
+          <h2 className="text-lg font-semibold text-[#111827]">
+            Bill has been sent
+          </h2>
+
+          {/* Message */}
+          <p className="text-base text-[#46484b] mt-2 leading-relaxed">
+            The bill was successfully sent to your email <br />
+            <span className="font-semibold text-[#111827]">
+              contact@websec.nl, finance@websec.nl.
+            </span>
+          </p>
+
+          {/* Button */}
+          <button
+            type="button"
+            className="w-full mt-6 py-3 rounded-lg bg-[#111827] text-white text-sm font-medium"
+          >
+            Done
           </button>
         </div>
       </section>
