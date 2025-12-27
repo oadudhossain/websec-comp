@@ -682,6 +682,102 @@ export function Welcome() {
           </button>
         </div>
       </section>
+      {/* Get in touch -------------------- */}
+      <section className="w-full h-122 rounded-3xl px-6 py-7 mb-5 shadow-2xl relative overflow-hidden">
+        <div className="relative content-center">
+          <div
+            className="w-2/4 h-40 absolute -top-13 left-5 bg-no-repeat bg-right bg-contain"
+            style={{
+              backgroundImage:
+                "url('https://i.ibb.co.com/gMhB9N6h/Layer-2.png')",
+              backgroundSize: "contain",
+              backgroundPosition: "left center",
+            }}
+          />
+          <div
+            className="w-2/4 h-48 absolute top-68 -left-6 bg-no-repeat bg-bottom bg-contain"
+            style={{
+              backgroundImage:
+                "url('https://i.ibb.co.com/M576mWyF/Layer-1.png')",
+              backgroundSize: "contain",
+              backgroundPosition: "",
+            }}
+          />
+        </div>
+        <div></div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* LEFT SIDE – Contact Info */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-semibold text-[#111827]">
+              Get in Touch
+            </h2>
+
+            <div>
+              <p className="text-sm text-[#6B7280]">Email</p>
+              <p className="text-lg font-semibold text-[#111827] mt-1">
+                contact@company.com
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm text-[#6B7280]">Phone</p>
+              <p className="text-base font-semibold text-[#111827] mt-1">
+                +1 (123) 122 1000
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm text-[#6B7280]">Address</p>
+              <p className="text-lg font-semibold text-[#111827] mt-1 leading-snug">
+                120 Market Street, San Francisco, CA
+              </p>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE – Contact Form */}
+          <div className="space-y-5">
+            {/* Full Name */}
+            <div>
+              <label className="font-normal text-base text-[#111827]">
+                Full Name
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                className="w-full mt-1 px-4 py-3 rounded-lg bg-[#F9FAFB] border border-[#E5E7EB] focus:ring-2 focus:ring-[#6D28D9] outline-none"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="text-[#111827]">Email</label>
+              <input
+                type="email"
+                placeholder="Enter your business email"
+                className="w-full mt-1 px-4 py-3 rounded-lg bg-[#F9FAFB] border border-[#E5E7EB] focus:ring-2 focus:ring-[#6D28D9] outline-none"
+              />
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className="text-[#111827]">Message</label>
+              <textarea
+                placeholder="Write your message here..."
+                rows={5}
+                className="w-full mt-1 px-4 py-3 rounded-lg bg-[#F9FAFB] border border-[#E5E7EB] resize-none focus:ring-2 focus:ring-[#6D28D9] outline-none"
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="button"
+              className="w-full max-h-10 py-3 rounded-lg bg-[#111827] text-white text-sm font-semibold hover:bg-black transition"
+            >
+              Submit Message
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
