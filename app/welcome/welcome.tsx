@@ -10,7 +10,14 @@ import {
   Plus,
   ShieldAlert,
 } from "lucide-react";
+
 import React, { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/components/ui/accordion";
 type PaymentMethod = "visa" | "mastercard" | "paypal";
 
 export function Welcome() {
@@ -683,7 +690,7 @@ export function Welcome() {
         </div>
       </section>
       {/* Get in touch -------------------- */}
-      <section className="w-full h-122 rounded-3xl px-6 py-7 mb-5 shadow-2xl relative overflow-hidden">
+      <section className="w-full h-80 rounded-3xl px-6 py-7 mb-5 shadow-2xl relative overflow-hidden">
         <div className="relative content-center">
           <div
             className="w-2/4 h-40 absolute -top-13 left-5 bg-no-repeat bg-right bg-contain"
@@ -775,6 +782,126 @@ export function Welcome() {
             >
               Submit Message
             </button>
+          </div>
+        </div>
+      </section>
+      <section className="w-full bg-gradient-to-br from-[#FFF4F4] to-[#EFEFFF] py-5">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-3 items-stretch">
+            {/* Left side 1/3 */}
+            <div className="lg:col-span-1 flex h-full flex-col">
+              <div>
+                <h2 className="text-3xl font-semibold text-[#0E121B]">
+                  Knowledge base & FAQ
+                </h2>
+
+                <p className="mt-2 text-sm text-[#525866]">
+                  Answer to popular questions
+                </p>
+              </div>
+
+              {/*  background */}
+              <div className="relative mt-auto">
+                <div
+                  className="w-120 h-110 bg-no-repeat bg-contain bg-left"
+                  style={{
+                    backgroundImage:
+                      "url('https://i.ibb.co.com/nqGPyJJL/Group-1.png')",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Right side ----- */}
+            <div className="lg:col-span-2">
+              <Accordion
+                type="single"
+                collapsible
+                defaultValue="item-2"
+                className="w-full space-y-4"
+              >
+                <AccordionItem
+                  value="item-1"
+                  className="rounded-xl border border-[#E6E8EC] bg-white px-5"
+                >
+                  <AccordionTrigger className="text-left text-base font-semibold text-[#0E121B]">
+                    Is all the information stored on the website public or
+                    confidential?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-[#131927] leading-relaxed">
+                    All sensitive data is securely stored and protected using
+                    industry standard encryption and access controls.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem
+                  value="item-2"
+                  className="rounded-xl border border-[#E6E8EC] bg-white px-5"
+                >
+                  <AccordionTrigger className="text-left text-base font-semibold text-[#0E121B]">
+                    How is the user rating table formed and how to get to it?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-[#131927] leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem
+                  value="item-3"
+                  className="rounded-xl border border-[#E6E8EC] bg-white px-5"
+                >
+                  <AccordionTrigger className="text-left text-base font-semibold text-[#0E121B]">
+                    What does a paid subscription on the WebSec?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-[#131927] leading-relaxed">
+                    A paid subscription unlocks advanced analytics, extended
+                    monitoring, and priority support features.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem
+                  value="item-4"
+                  className="rounded-xl border border-[#E6E8EC] bg-white px-5"
+                >
+                  <AccordionTrigger className="text-left text-base font-semibold text-[#0E121B]">
+                    How long will it take for support to respond to my request?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-[#131927] leading-relaxed">
+                    Support requests are typically answered within 24 hours on
+                    business days.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem
+                  value="item-5"
+                  className="rounded-xl border border-[#E6E8EC] bg-white px-5"
+                >
+                  <AccordionTrigger className="text-left text-base font-semibold text-[#0E121B]">
+                    Is the website connected to WebSec and how?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-[#131927] leading-relaxed">
+                    Yes. The website integrates directly with WebSec using
+                    secure API connections.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem
+                  value="item-6"
+                  className="rounded-xl border border-[#E6E8EC] bg-white px-5"
+                >
+                  <AccordionTrigger className="text-left text-base font-semibold text-[#0E121B]">
+                    How can I cancel my subscription plan?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-[#131927] leading-relaxed">
+                    You can cancel your plan at any time from your account
+                    settings page.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>
