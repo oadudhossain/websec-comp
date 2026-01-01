@@ -785,6 +785,7 @@ export function Welcome() {
           </div>
         </div>
       </section>
+      {/* Knowledge base and faq -------- */}
       <section className="w-full bg-gradient-to-br from-[#FFF4F4] to-[#EFEFFF] py-5">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-3 items-stretch">
@@ -901,6 +902,79 @@ export function Welcome() {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Profile --------------- */}
+      <section className="w-full bg-[#F7F8FC] py-6 px-6">
+        <div className="mx-auto max-w-6xl space-y-6">
+          {/* Top card */}
+          <div className="mx-auto max-w-7xl">
+            {/* Gradient card */}
+            <div
+              className="relative h-[96px] rounded-2xl"
+              style={{
+                background:
+                  "linear-gradient(90deg, #CF0F99 0%, #A63386 10%, #884EC7 50%, #EBE2F4 75%, #FFFFFF 100%)",
+              }}
+            />
+
+            {/* Content row */}
+            <div className="relative -mt-8 flex items-center justify-between px-4">
+              {/* Left user info */}
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 overflow-hidden rounded-full bg-white shadow flex items-center justify-center text-xl">
+                  👨‍💼
+                </div>
+
+                <div>
+                  <p className="text-sm font-medium text-[#0E121B]">
+                    Joel Aivad Ossi
+                  </p>
+                  <p className="text-xs text-[#525866]">
+                    joel.upwork@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              {/* Right buttons */}
+              <div className="flex items-center gap-3">
+                <button className="rounded-md border border-[#E6E8EC] px-4 py-1.5 text-xs text-[#525866] hover:bg-gray-100">
+                  Cancel
+                </button>
+                <button className="rounded-md bg-[#0E121B] px-4 py-1.5 text-xs text-white hover:bg-black">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Profile settings header */}
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-lg font-semibold text-[#0E121B]">
+                Profile settings
+              </h2>
+              <p className="text-sm text-[#525866]">
+                Here you can configure your personal information
+              </p>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex gap-2 rounded-lg bg-white p-1 shadow-sm">
+              <button className="rounded-md bg-[#EEF2FF] px-4 py-1.5 text-sm font-medium text-[#4338CA]">
+                Profile
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
+                Socials
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
+                Notifications
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
+                Privacy Security
+              </button>
             </div>
           </div>
         </div>
