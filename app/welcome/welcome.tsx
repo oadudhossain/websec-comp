@@ -4,7 +4,9 @@ import logoLight from "./logo-light.svg";
 import {
   CircleCheck,
   CircleX,
+  CloudDownload,
   Download,
+  GlobeIcon,
   Locate,
   MailPlus,
   Plus,
@@ -921,25 +923,25 @@ export function Welcome() {
             />
 
             {/* Content row */}
-            <div className="relative -mt-8 flex items-center justify-between px-4">
+            <div className="relative -mt-8 flex justify-between px-4">
               {/* Left user info */}
               <div className="flex items-center gap-4">
-                <div className="h-14 w-14 overflow-hidden rounded-full bg-white shadow flex items-center justify-center text-xl">
+                <div className="h-20 w-20 overflow-hidden rounded-full bg-white shadow flex items-center justify-center text-xl">
                   👨‍💼
                 </div>
 
-                <div>
-                  <p className="text-sm font-medium text-[#0E121B]">
+                <div className="absolute top-9 left-26">
+                  <p className="text-lg font-semibold text-[#0E121B]">
                     Joel Aivad Ossi
                   </p>
-                  <p className="text-xs text-[#525866]">
+                  <p className="text-sm text-[#394050]">
                     joel.upwork@gmail.com
                   </p>
                 </div>
               </div>
 
               {/* Right buttons */}
-              <div className="flex items-center gap-3">
+              <div className="flex gap-3 absolute top-10 left-9/12">
                 <button className="rounded-md border border-[#E6E8EC] px-4 py-1.5 text-xs text-[#525866] hover:bg-gray-100">
                   Cancel
                 </button>
@@ -975,6 +977,211 @@ export function Welcome() {
               <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
                 Privacy Security
               </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col w-full rounded-2xl bg-white my-5 p-6 gap-6">
+          {/* Public profile */}
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-base font-semibold text-[#0E121B]">
+                Public profile
+              </h3>
+              <p className="mt-1 text-base text-[#525866]">
+                Update your public information that is visible to others.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Name<span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  defaultValue="Joel Aviad Ossi"
+                  className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#7C5CFC]"
+                />
+              </div>
+
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Email<span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  defaultValue="joel.upwork@gmail.com"
+                  className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#7C5CFC]"
+                />
+
+                <div className="flex gap-2 mt-2 rounded-lg bg-[#EEF6FF] px-4 py-2 text-xs text-[#1E3A8A]">
+                  <ShieldAlert color="#272525" /> We have sent email to
+                  joelk.upwork@gmail.com. We will keep using joel.ossi@gmail.com
+                  until you confirm the new address
+                </div>
+              </div>
+
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Username
+                </label>
+                <p className="mt-1 text-xs text-[#525866]">
+                  After payment, the service will be automatically approved.
+                </p>
+                <input
+                  type="text"
+                  defaultValue="webseccl"
+                  className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Type of account
+                </label>
+                <select className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm">
+                  <option>Security Researcher</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <hr className="border-[#E6E8EC]" />
+
+          {/* Profile picture */}
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-base font-semibold text-[#0E121B]">
+                Profile picture
+              </h3>
+              <p className="mt-1 text-sm text-[#525866]">
+                Upload your profile picture.
+              </p>
+            </div>
+
+            <label
+              htmlFor="profile-upload"
+              className="flex cursor-pointer items-center justify-center rounded-lg border border-dashed border-[#D1D5DB] bg-[#FAFAFF] py-10 text-center"
+            >
+              <div className="text-sm text-[#525866]">
+                <div className="justify-items-center">
+                  <CloudDownload color="#272525" />
+                </div>
+                <div className="flex gap-1 justify-center">
+                  <p className="text-base underline font-semibold text-[#131927]">
+                    Click to upload
+                  </p>
+                  <p className="text-base font-semibold text-[#131927]">
+                    or drag and drop
+                  </p>
+                </div>
+
+                <p className="mt-1 text-xs text-[#6D717F]">
+                  Min 400x400px, PNG or JPEG formats.
+                </p>
+              </div>
+
+              <input
+                id="profile-upload"
+                type="file"
+                accept="image/png, image/jpeg"
+                className="hidden"
+              />
+            </label>
+          </div>
+
+          <hr className="border-[#E6E8EC]" />
+
+          {/* Country & Location */}
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-base font-semibold text-[#0E121B]">
+                Country & Location
+              </h3>
+              <p className="mt-1 text-sm text-[#525866]">
+                Update your country and location.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Select Country{" "}
+                  <span className="text-[#525866]">(optional)</span>
+                </label>
+                <select className="mt-2 w-full rounded-lg border border-[#9c9696] px-4 py-2 text-sm">
+                  <div>
+                    <GlobeIcon color="#272525" />
+                  </div>
+                  <option>Select a country...</option>
+                  <option>Bangladesh</option>
+                  <option>China</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Location <span className="text-[#525866]">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your location"
+                  className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+              </div>
+            </div>
+          </div>
+
+          <hr className="border-[#E6E8EC]" />
+
+          {/* General information */}
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-base font-semibold text-[#0E121B]">
+                General information
+              </h3>
+              <p className="mt-1 text-sm text-[#525866]">
+                Here you can add a description about yourself.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-base font-semibold text-[#0E121B]">
+                    Open for employment
+                  </p>
+                  <p className="text-xs text-[#525866]">
+                    Let others know you're looking for permanent employment
+                    opportunities by adding a tag to your user profile.
+                  </p>
+                </div>
+                {/* Toggle Switch ---------- */}
+                <div className=""></div>
+              </div>
+
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  Intro <span className="text-[#525866]">(Optional)</span>
+                </label>
+                <textarea
+                  placeholder="Enter your info..."
+                  className="mt-2 h-24 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+                <p className="mt-1 text-right text-xs text-[#9CA3AF]">0/200</p>
+              </div>
+
+              <div>
+                <label className="text-base font-semibold text-[#0E121B]">
+                  About me <span className="text-[#525866]">(Optional)</span>
+                </label>
+                <textarea
+                  placeholder="Enter your info..."
+                  className="mt-2 h-24 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+                <p className="mt-1 text-right text-xs text-[#9CA3AF]">0/200</p>
+              </div>
             </div>
           </div>
         </div>
