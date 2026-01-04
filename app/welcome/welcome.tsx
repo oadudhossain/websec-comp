@@ -909,7 +909,12 @@ export function Welcome() {
         </div>
       </section>
       {/* Profile --------------- */}
-      <section className="w-full bg-[#F7F8FC] py-6 px-6">
+      <section
+        className="w-full py-6 px-6"
+        style={{
+          background: "linear-gradient(125.5deg, #FFF4F4 0%, #EFEFFF 70.82%)",
+        }}
+      >
         <div className="mx-auto max-w-6xl space-y-6">
           {/* Top card */}
           <div className="mx-auto max-w-7xl">
@@ -965,16 +970,16 @@ export function Welcome() {
 
             {/* Tabs */}
             <div className="flex gap-2 rounded-lg bg-white p-1 shadow-sm">
-              <button className="rounded-md bg-[#EEF2FF] px-4 py-1.5 text-sm font-medium text-[#4338CA]">
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#4D5461] hover:bg-gray-100 hover:text-[#131927]">
                 Profile
               </button>
-              <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
                 Socials
               </button>
-              <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
                 Notifications
               </button>
-              <button className="rounded-md px-4 py-1.5 text-sm text-[#525866] hover:bg-gray-100">
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
                 Privacy Security
               </button>
             </div>
@@ -1015,7 +1020,7 @@ export function Welcome() {
                   className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#7C5CFC]"
                 />
 
-                <div className="flex gap-2 mt-2 rounded-lg bg-[#EEF6FF] px-4 py-2 text-xs text-[#1E3A8A]">
+                <div className="flex gap-2 mt-2 rounded-lg bg-[#EEF6FF] px-4 py-2 text-xs text-[#131927]">
                   <ShieldAlert color="#272525" /> We have sent email to
                   joelk.upwork@gmail.com. We will keep using joel.ossi@gmail.com
                   until you confirm the new address
@@ -1026,9 +1031,7 @@ export function Welcome() {
                 <label className="text-base font-semibold text-[#0E121B]">
                   Username
                 </label>
-                <p className="mt-1 text-xs text-[#525866]">
-                  After payment, the service will be automatically approved.
-                </p>
+
                 <input
                   type="text"
                   defaultValue="webseccl"
@@ -1152,7 +1155,7 @@ export function Welcome() {
                   <p className="text-base font-semibold text-[#0E121B]">
                     Open for employment
                   </p>
-                  <p className="text-xs text-[#525866]">
+                  <p className="text-sm text-[#525866]">
                     Let others know you're looking for permanent employment
                     opportunities by adding a tag to your user profile.
                   </p>
