@@ -1189,6 +1189,151 @@ export function Welcome() {
           </div>
         </div>
       </section>
+      {/* Social Links ---------- */}
+      <section
+        className="w-full py-6 px-6"
+        style={{
+          background: "linear-gradient(125.5deg, #FFF4F4 0%, #EFEFFF 70.82%)",
+        }}
+      >
+        <div className="mx-auto max-w-6xl space-y-6">
+          {/* Top card */}
+          <div className="mx-auto max-w-7xl">
+            {/* Gradient card */}
+            <div
+              className="relative h-[96px] rounded-2xl"
+              style={{
+                background:
+                  "linear-gradient(90deg, #CF0F99 0%, #A63386 10%, #884EC7 50%, #EBE2F4 75%, #FFFFFF 100%)",
+              }}
+            />
+
+            {/* Content row */}
+            <div className="relative -mt-8 flex justify-between px-4">
+              {/* Left user info */}
+              <div className="flex items-center gap-4">
+                <div className="h-20 w-20 overflow-hidden rounded-full bg-white shadow flex items-center justify-center text-xl">
+                  👨‍💼
+                </div>
+
+                <div className="absolute top-9 left-26">
+                  <p className="text-lg font-semibold text-[#0E121B]">
+                    Joel Aivad Ossi
+                  </p>
+                  <p className="text-sm text-[#394050]">
+                    joel.upwork@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              {/* Right buttons */}
+              <div className="flex gap-3 absolute top-10 left-9/12">
+                <button className="rounded-md border border-[#E6E8EC] px-4 py-1.5 text-xs text-[#525866] hover:bg-gray-100">
+                  Cancel
+                </button>
+                <button className="rounded-md bg-[#0E121B] px-4 py-1.5 text-xs text-white hover:bg-black">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Profile settings header */}
+          <div className="flex items-center justify-between pb-10">
+            <div>
+              <h2 className="text-lg font-semibold text-[#0E121B]">
+                Profile settings
+              </h2>
+              <p className="text-sm text-[#525866]">
+                Here you can configure your personal information
+              </p>
+            </div>
+
+            {/* Tabs */}
+            <div className="flex gap-2 rounded-lg bg-white p-1 shadow-sm">
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#4D5461] hover:bg-gray-100 hover:text-[#131927]">
+                Profile
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
+                Socials
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
+                Notifications
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
+                Privacy Security
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full rounded-2xl bg-white p-6">
+          <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              {/* Website */}
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-[#0E121B]">
+                  Website <span className="text-[#525866]">(optional)</span>
+                </label>
+                <input
+                  type="url"
+                  defaultValue="https://websec.nl/"
+                  className="w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#7C5CFC]"
+                />
+                <p className="text-xs text-[#6D717F]">
+                  Input your current website if you have
+                </p>
+              </div>
+
+              {/* Twitter */}
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-[#0E121B]">
+                  Twitter (X) <span className="text-[#525866]">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your Twitter (X)"
+                  className="w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+                <p className="text-xs text-[#6D717F]">
+                  https://twitter.com/name
+                </p>
+              </div>
+
+              {/* Discord */}
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-[#0E121B]">
+                  Discord channel{" "}
+                  <span className="text-[#525866]">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Link to channel"
+                  className="w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+                <p className="text-xs text-[#6D717F]">
+                  https://discord.com/name
+                </p>
+              </div>
+
+              {/* LinkedIn */}
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-[#0E121B]">
+                  LinkedIn <span className="text-[#525866]">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your LinkedIn"
+                  className="w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                />
+                <p className="text-xs text-[#6D717F]">
+                  https://linkedin.com/in/name
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
