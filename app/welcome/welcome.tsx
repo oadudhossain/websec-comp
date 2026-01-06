@@ -1558,6 +1558,324 @@ export function Welcome() {
           </div>
         </div>
       </section>
+      {/* Privacy Security ---------- */}
+      <section
+        className="w-full py-6 px-6"
+        style={{
+          background: "linear-gradient(125.5deg, #FFF4F4 0%, #EFEFFF 70.82%)",
+        }}
+      >
+        <div className="mx-auto max-w-6xl space-y-6">
+          {/* Top card */}
+          <div className="mx-auto max-w-7xl">
+            {/* Gradient card */}
+            <div
+              className="relative h-[96px] rounded-2xl"
+              style={{
+                background:
+                  "linear-gradient(90deg, #CF0F99 0%, #A63386 10%, #884EC7 50%, #EBE2F4 75%, #FFFFFF 100%)",
+              }}
+            />
+
+            {/* Content row */}
+            <div className="relative -mt-8 flex justify-between px-4">
+              {/* Left user info */}
+              <div className="flex items-center gap-4">
+                <div className="h-20 w-20 overflow-hidden rounded-full bg-white shadow flex items-center justify-center text-xl">
+                  👨‍💼
+                </div>
+
+                <div className="absolute top-9 left-26">
+                  <p className="text-lg font-semibold text-[#0E121B]">
+                    Joel Aivad Ossi
+                  </p>
+                  <p className="text-sm text-[#394050]">
+                    joel.upwork@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              {/* Right buttons */}
+              <div className="flex gap-3 absolute top-10 left-9/12">
+                <button className="rounded-md border border-[#E6E8EC] px-4 py-1.5 text-xs text-[#525866] hover:bg-gray-100">
+                  Cancel
+                </button>
+                <button className="rounded-md bg-[#0E121B] px-4 py-1.5 text-xs text-white hover:bg-black">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Profile settings header */}
+          <div className="flex items-center justify-between pb-10">
+            <div>
+              <h2 className="text-lg font-semibold text-[#0E121B]">
+                Privacy Security{" "}
+              </h2>
+              <p className="text-sm text-[#525866]">
+                Here you can configure your privacy security.{" "}
+              </p>
+            </div>
+
+            {/* Tab Buttons----------- */}
+            <div className="flex gap-2 rounded-lg bg-white p-1 shadow-sm">
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#4D5461] hover:bg-gray-100 hover:text-[#131927]">
+                Profile
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
+                Socials
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
+                Notifications
+              </button>
+              <button className="rounded-md px-4 py-1.5 text-sm font-semibold text-[#525866] hover:bg-gray-100 hover:text-[#131927]">
+                Privacy Security
+              </button>
+            </div>
+          </div>
+          {/* New client request -------------------- */}
+          <section className="w-full rounded-2xl bg-white p-6">
+            <div className="flex flex-col gap-6">
+              {/* Change Password */}
+              <div className="grid grid-cols-1 mr-24 lg:grid-cols-2">
+                <div>
+                  <h3 className="text-base font-semibold text-[#0E121B]">
+                    Change Password
+                  </h3>
+                  <p className="mt-1 text-sm text-[#525866]">
+                    Update password for enhanced account security.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-5">
+                  <div>
+                    <label className="text-sm font-semibold text-[#0E121B]">
+                      Old Password<span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Enter old password"
+                      className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-[#0E121B]">
+                      New Password<span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Enter new password"
+                      className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-[#0E121B]">
+                      Confirm New Password
+                      <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Enter new password again"
+                      className="mt-2 w-full rounded-lg border border-[#E6E8EC] px-4 py-2 text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <hr className="border-[#E6E8EC]" />
+
+              {/* Two-factor Authentication */}
+              <div className="flex items-start mr-24 justify-between">
+                <div>
+                  <h3 className="text-base font-semibold text-[#0E121B]">
+                    Two-factor Authentication
+                  </h3>
+                  <p className="mt-1 text-sm text-[#525866]">
+                    Add an extra layer of protection to your account.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-6">
+                  <div>
+                    <p className="text-sm font-semibold text-[#0E121B]">
+                      Enable 2FA
+                    </p>
+                    <p className="text-xs text-[#525866]">
+                      Recommended to include.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center  space-x-2">
+                  <Switch id="airplane-mode" />
+                </div>
+              </div>
+
+              <hr className="border-[#E6E8EC]" />
+
+              {/* Language */}
+              <div className="flex items-center gap-69 justify-baseline">
+                <div>
+                  <h3 className="text-base font-semibold text-[#0E121B]">
+                    Language
+                  </h3>
+                  <p className="mt-1 text-sm text-[#525866]">
+                    Display the websec in your selected language.
+                  </p>
+                </div>
+
+                <NativeSelect className="bg-[#F8F8FC]">
+                  <NativeSelectOption value="">English</NativeSelectOption>
+                  <NativeSelectOption value="todo">German</NativeSelectOption>
+                  <NativeSelectOption value="in-progress">
+                    Spansh
+                  </NativeSelectOption>
+                </NativeSelect>
+              </div>
+
+              <hr className="border-[#E6E8EC]" />
+
+              {/* Timezone */}
+              <div className="flex items-center gap-72 justify-baseline">
+                <div>
+                  <h3 className="text-base font-semibold text-[#0E121B]">
+                    Timezone and Format
+                  </h3>
+                  <p className="mt-1 text-sm text-[#525866]">
+                    Choose your timezone and preferred format.
+                  </p>
+                </div>
+
+                <NativeSelect className="bg-[#F8F8FC]">
+                  <NativeSelectOption value="">
+                    Pacific Time - Us & Canada
+                  </NativeSelectOption>
+                  <NativeSelectOption value="todo">Europe</NativeSelectOption>
+                  <NativeSelectOption value="in-progress">
+                    Australia
+                  </NativeSelectOption>
+                </NativeSelect>
+              </div>
+
+              <hr className="border-[#E6E8EC]" />
+
+              {/* Active Sessions */}
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-base font-semibold text-[#0E121B]">
+                    Active Sessions
+                  </h3>
+                  <p className="mt-1 text-sm text-[#525866]">
+                    Monitor and manage all your active sessions.
+                  </p>
+                </div>
+
+                <button className="rounded-md border border-[#BA0E2B] px-4 py-1.5 text-sm text-[#BA0E2B]">
+                  Close All Sessions
+                </button>
+              </div>
+
+              {/* Sessions table */}
+              <div className="overflow-hidden rounded-lg border border-[#E6E8EC]">
+                <table className="w-full text-sm">
+                  <thead className="bg-[#F8F8FC] text-left text-xs font-semibold text-[#394050]">
+                    <tr className="align-middle">
+                      <th className="px-4 py-3 whitespace-nowrap">Browser</th>
+                      <th className="px-4 py-3 whitespace-nowrap">Location</th>
+
+                      <th className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <ArrowDownUp
+                            strokeWidth={1.5}
+                            className="h-4 w-4 shrink-0"
+                          />
+                          <span>Most recent activity</span>
+                        </div>
+                      </th>
+
+                      <th className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <ArrowDownUp
+                            strokeWidth={1.5}
+                            className="h-4 w-4 shrink-0"
+                          />
+                          <span>IP Address</span>
+                        </div>
+                      </th>
+
+                      <th className="px-4 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-2">
+                          <ArrowDownUp
+                            strokeWidth={1.5}
+                            className="h-4 w-4 shrink-0"
+                          />
+                          <span>Last Active</span>
+                        </div>
+                      </th>
+
+                      <th className="px-4 py-3">
+                        <div className="flex justify-end">
+                          <ArrowDownUp strokeWidth={1.5} className="h-4 w-4" />
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody className="font-medium text-sm">
+                    {[
+                      [
+                        "Québec, Canada",
+                        "Current Session",
+                        "224.0.1.1",
+                        "2h ago",
+                      ],
+                      [
+                        "Vancouver, Canada",
+                        "Sep 26, 2023 at 10:00 AM",
+                        "226.0.1.1",
+                        "1d ago",
+                      ],
+                      [
+                        "Vancouver, Canada",
+                        "Sep 24, 2023 at 9:00 AM",
+                        "226.0.1.1",
+                        "1d ago",
+                      ],
+                      [
+                        "Québec, Canada",
+                        "Sep 23, 2023 at 8:24 AM",
+                        "224.0.1.1",
+                        "1d ago",
+                      ],
+                      [
+                        "Vancouver, Canada",
+                        "Sep 22, 2023 at 3:00 PM",
+                        "226.0.1.1",
+                        "1d ago",
+                      ],
+                    ].map((row, i) => (
+                      <tr
+                        key={i}
+                        className="border-t font-medium border-[#E6E8EC]"
+                      >
+                        <td className="px-4 py-3">
+                          <Chromium />
+                        </td>
+                        <td className="px-4 py-3">{row[0]}</td>
+                        <td className="px-4 py-3">{row[1]}</td>
+                        <td className="px-4 py-3">{row[2]}</td>
+                        <td className="px-4 py-3">{row[3]}</td>
+                        <td className="px-4 py-3 text-[#525866]">✕</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </section>
   );
 }
