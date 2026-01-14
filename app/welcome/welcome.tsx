@@ -16,6 +16,7 @@ import {
   MailPlus,
   Plus,
   ShieldAlert,
+  X,
 } from "lucide-react";
 
 import React, { useState } from "react";
@@ -1866,7 +1867,11 @@ export function Welcome() {
                         <td className="px-4 py-3">{row[1]}</td>
                         <td className="px-4 py-3">{row[2]}</td>
                         <td className="px-4 py-3">{row[3]}</td>
-                        <td className="px-4 py-3 text-[#525866]">✕</td>
+                        <td className="px-4 py-3 text-[#525866]">
+                          <button>
+                            <X color="#f50000" />
+                          </button>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
