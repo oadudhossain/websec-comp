@@ -13,6 +13,7 @@ import {
   Download,
   GlobeIcon,
   Locate,
+  LogOut,
   MailPlus,
   Plus,
   ShieldAlert,
@@ -1880,6 +1881,44 @@ export function Welcome() {
             </div>
           </section>
         </div>
+      </section>
+      {/* Log Out All Season------------- */}
+      <section className="my-10">
+        <div className="w-112.5 h-70 bg-white rounded-2xl p-6 shadow-xl text-center flex flex-col justify-center">
+          {/* Icon */}
+          <div className="flex justify-center mb-4">
+            <LogOut color="#f50000" strokeWidth={3} />{" "}
+          </div>
+
+          {/* Title */}
+          <h2 className="text-lg font-semibold text-[#111827]">
+            Are you sure you to log out?
+          </h2>
+
+          {/* Message */}
+          <p className="text-base text-[#46484b] mt-2 leading-relaxed">
+            We will close all current sessions and you will have to log in to
+            your accounts again
+          </p>
+
+          {/* Buttons */}
+          <div className="mt-6 grid grid-cols-2 gap-3 w-full">
+            <button
+              type="button"
+              className="h-12 w-full rounded-lg border border-[#000000] bg-white text-base font-semibold text-[#111827] flex items-center justify-center"
+            >
+              Yes
+            </button>
+
+            <button
+              type="button"
+              className="h-12 w-full rounded-lg bg-[#131927] text-white text-base font-semibold flex items-center justify-center"
+            >
+              No
+            </button>
+          </div>
+        </div>
+        {/* 2FA SECURITY ---------- */}
       </section>
     </section>
   );
